@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        #bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+#bar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bar a:hover {
+    background-color: #000;
+}
+#bar input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 8px 0 8px auto;
+    font-size: 17px;
+    width: 200px;
+}
+#search {
+    border-radius: 8px;
+    width: 22px;
+    margin-left: 8px;
+    padding: 6px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+        /* Heading Styles */
+        .heading h3 {
+            text-align: center;
+            color: #222;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+
+        /* Form Styles */
+        form {
+            background-color: white;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        form input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        footer .column {
+            width: 30%;
+        }
+
+        footer .column h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        footer .social a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        footer .social a:hover {
+            color: #007bff;
+        }
+
+        footer .footer-menu a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 20px;
+        }
+
+        .qr{
+  width:30%;
+  float: right;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+
+        footer .footer-menu a:hover {
+            color: white;
+        }
+
+        footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bar">
+        <a href="./HomePage.html">HOME</a>
+        <a href="./Login.html">LOGIN</a>
+        <a href="./MyWedding.html">MY WEDDING</a>
+        <a href="./FoodAndBeverage.html">FOOD COMBO</a>
+        <a href="./promotion.html">PROMOTION & EVENTS</a>
+        <a href="./Reservation.html">RESERVATION</a>
+        <a href="./AboutUs.html">ABOUT US</a>
+        <a href="./FAQ.html">FAQ</a>
+        <a href="./blog.html">BLOG</a>
+        <input type="text" placeholder="Search..">
+        <img id="search" src="./images/search.png">
+    </div>
+
+    <div class="heading">
+        <h3>Payment Page</h3>
+    </div>
+
+    <div style="margin: 20px;">
+        <form action="payform.php" method="POST">
+            <label for="cardName">Name on Card:</label>
+            <input type="text" id="cardName" name="cardName" placeholder="John Doe" required><br>
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="1111-2222-3333-4444" required><br>
+
+            <label for="expDate">Expiration Date:</label>
+            <input type="text" id="expDate" name="expDate" placeholder="MM/YY" required><br>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required><br>
+
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" placeholder="Rs0.00" required><br>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <footer>
+
+        <div class="row primary">
+          <div class="column about">
+            <p class="loc">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              316, Ruwan Perera Road, Sri Lanka<br>
+              <h3>WHY US</h3>
+              
+              The Ultimate Setting For Some Of Life's Greatest Moments,<br>
+        
+              We Create Incredible Memories For Guests On Their 'Once In a Lifetime' Journey.<br>
+              <br>
+              <h3>FIND US</h3>
+            </p>
+            <div class="social">
+              <a href="https://www.facebook.com/" class="fa fa-facebook-square"></a>
+              <a href="https://twitter.com/" class="fa fa-twitter-square"></a>
+              <a href="https://lk.linkedin.com/" class="fa fa-linkedin-square"></a>
+              <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            </div>
+          </div>
+        
+          <div class="column link">
+          <br><br>
+            GENERAL INQUIRIES<br>
+            TEL : +94 75 123 1299<br>
+            Email : we@sunsetplains.lk<br><br>
+        
+            RESTAURANT RESERVATIONS<br>
+            TEL : +94 77 210 1187<br>
+            Email:sunsetreserve@sunsetplains.lk<br><br>
+        
+            BANQUET SALES<br>
+            TEL : +94 70 345 2876<br>
+            Email: newrathada@sunsetplains.lk<br><br>
+            
+            PHOTOGRAPHIC<br>
+            TEL : +94 72 666 8765<br>
+            Email: marlin@sunsetplains.lk<br><br>
+            
+          </div>
+          <div class="column subscribe">
+            <div>
+            <p>
+              <img class="qr" src="./images/qr.png">
+              <u>OPERATING HOURS</u><br><br>
+        
+            MON - SAT -<br>
+             &nbsp &nbsp 8AM TO 10PM<br>
+            SUN -<br>
+             &nbsp &nbsp 8AM TO 12PM
+             </p>
+            </div>
+            <div>
+                <p class="news">Sign up for the Hotel sunset plains newsletter<p>
+              <input type="email" placeholder="Your email id here" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row copyright">
+          <div class="footer-menu">
+        
+          <a href="./home.html">HOME</a>
+          <a href="./MyWedding.html">MY WEDDING</a>
+          <a href="./Food&Beverage_Menu.html">FOOD COMBO</a>
+          <a href="./promotion.html">PROMOTION & EVENTS</a>
+          <a href="./reservation.html">RESERVATION</a>
+          <a href="./termandcondition.html">TERMS & CONDITIONS</a>
+          <a href="./aboutus.html">ABOUT US</a>
+          <a href="./FAQ.html">FAQ</a>
+          <a href="./blog.html">BLOG</a>
+        
+          </div>
+           <p>Copyright &copy; 2023</p>
+        </div>
+        
+        </footer>
+</body>
+</html>

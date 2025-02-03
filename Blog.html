@@ -1,0 +1,524 @@
+<html>
+<head>
+<title>Hotel Sunset Plains</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+#bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+#bar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bar a:hover {
+    background-color: #000;
+}
+#bar input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 8px 0 8px auto;
+    font-size: 17px;
+    width: 200px;
+}
+#search {
+    border-radius: 8px;
+    width: 25px;
+    margin-left: 8px;
+    padding: 6px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.div1, .review {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.div1 h1, .review h1 {
+    text-align: center;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blog h2, .review h2 {
+    color: #0056b3;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.blog p, .review p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.blog img, .review img {
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mySlides {
+    display: none;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s;
+}
+
+.active {
+    background-color: #0056b3;
+}
+
+/* Feedback Form */
+form#feedback {
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+form#feedback .pinfo {
+    font-size: 16px;
+    color: #0056b3;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form#feedback input, form#feedback textarea, form#feedback select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form#feedback button {
+    background: linear-gradient(90deg, #0056b3, #4478b0);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form#feedback button:hover {
+    background: linear-gradient(90deg, #0056b3, #2768ae);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 10px;
+}
+.qr {
+    width: 30%;
+    float: right;
+    border: 1px dotted black;
+    margin: 0 0 15px 20px;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer .column {
+    flex: 1;
+    margin: 10px;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #feb47b;
+}
+
+footer .news input {
+    padding: 10px;
+    width: calc(100% - 120px);
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+footer .news button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0056b3, #3974b4);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer .news button:hover {
+    background: linear-gradient(90deg, #0056b3, #3774b6);
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+}
+
+
+</style>
+</head>
+<body>
+<header class="heading" id="home">
+<div id="bar">
+  <a href="./HomePage.html">HOME</a>
+  <a href="./MyWedding.html">MY WEDDING</a>
+  <a href="./FoodAndBeverage.html">FOOD COMBO</a>
+  <a href="./PromotionAndEvents.html">PROMOTION & EVENTS</a>
+  <a href="./Reservation.html">RESERVATION</a>
+  <a href="./AboutUs.html">ABOUT US</a>
+  <a href="./FAQ.html">FAQ</a>
+  <a href="./Blog.html">BLOG</a>
+  <input type="text" placeholder="Search..">
+  <img id="search" src="./images/search.png">
+</div>
+</header>
+
+  <div class="div1">
+   
+   <h1 class="h"><b><u>Blog & Review</u></b></h1>
+   
+  </div>
+  
+  <h1 class="hb"><b><u>Blog</u></b></h1>
+  
+  <div class="blog">
+  
+  <h2 class="q1"><u>What to Consider Before Planning an Outdoor Wedding?</u></h2>
+  
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="./images/blog1.jpg" style="width:100%">
+  <div class="text">Outdoor Wedding</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="./images/blog2.jpg" style="width:100%">
+  <div class="text">Outdoor Wedding</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="./images/blog3.jpg" style="width:100%">
+  <div class="text">Outdoor Wedding</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+  
+  <p>
+<b>Ample Shelter –</b> As we have already mentioned, you need a vendor that offers ample shelter from the fury of Mother Nature. For instance, you could go for with strong marque arrangements that effectively block strong winds and direct sunshine. Anything that keeps the ambiance calm and serene will do just fine. But even before you get to this stage, you must have already established how the weather is likely to turn out on the day for the wedding. If things do not look very promising, it is ideal that you look for another venue.<br><br>
+
+<b>Check Out For Additional Costs – </b>Outdoors is known to come with extra costs, so check these out before settling on the venue. Check if there are any site rental fees, cost of sanitation services. Therefore, when renting a venue, do your due diligence to ensure such charges are factored in.<br><br>
+
+<b>Do You Need Security? – </b>Depending on where you wish for the wedding to take place, you may need ample security. For instance, a wedding ceremony conducted in a venue that is not properly fenced could expose you and your guests to myriads of security concerns. The same applies to a wedding done in the jungle, where wild and dangerous animals are always on the prowl. As a matter of fact, the general consensus is to make arrangements for security even where there seems to not be any security concerns at all.<br><br>
+
+<b>Accessibility –</b> Another common consideration when planning for an outdoor venue is the accessibility of the place. It goes without saying that the venue should be fairly accessible both on foot and by car. You do not want your guests having to leave their cars miles away, only to subject them to a long and treacherous journey. Even if the venue is tucked away into the countryside, it should still be connected to major roads.<br><br>
+
+<b>Source of Power –</b> Last but not least, a reliable power source will go a long way in making your outdoor wedding something remarkable. This is especially true where the venue happens to be cut off from the main power grid system. Even if the venue is within access to electricity and other conventional sources of power, be sure you have backup systems such as an emergency generator. You never know when you may experience a blackout and have your wedding plans scuttled. <br><br>
+</p>
+
+  </div>
+  <br>
+  <br>
+  
+  
+  <div class="review">
+  
+  <h2 class="q1"><u>Things to keep in mind when booking your wedding hotel</u></h2>
+  <img class="blogg" src="./images/blog4.jpg" style="width:80%">
+  <p>
+  <b><u>Step 1 -Your requirements</b></u><br>
+
+Getting clear with your requirements before anything will help you make your wedding venue less overwhelming. Thus start by listing out all your requirements for your ideal wedding venue with your partner. Here getting your close family members can be helpful so you have the opinion of a third party.<br><br>
+
+Some of the things you need to consider here are<br><br>
+
+* Location &nbsp &nbsp * Budget &nbsp &nbsp * Number of guests &nbsp &nbsp * Date &nbsp &nbsp * Wedding Theme &nbsp &nbsp * Must have features of the venue<br><br><br>
+
+<b><u>Step 2 -Search for venues</b></u><br>
+
+Once you have a clear idea of what kind of a wedding venue you are looking for you can start searching for wedding hotels area to fit your requirements. For this, you can search online, ask around and get recommendations.<br><br>
+
+When you are searching for a venue, learning about their service reputation and flexibility is important. Here make sure you drop options that do not fit your list of requirements soon, no matter how beautiful the venue is so you can save a lot of hassle.<br><br><br>
+
+<b><u>Step 3 - Pay a visit</b></u><br>
+
+After you have a list of potential wedding hotel list, you can start comparing and narrowing down your options. Then try to make time to pay a visit to each wedding venue even if you have a wedding planner to take care of everything.<br><br>
+
+It’s your special day that you will remember for a lifetime. So it’s always worth to pay a visit in person no matter how magical the venue looks in photos and make sure every little detail is as you like. During your visits, gather all the information you need from the staff on prices, additional charges, services, and support they can provide.<br><br><br>
+
+<b><u>Step 4 - Set your priorities</b></u><br>
+
+Just as you are concerned about convenience, budge and practicality, you need to think about your life long dreams for the day too. Do you need a modern and simple space or a dramatic place with chandeliers and tall towers? Do you need an outdoor ceremony or an indoor ceremony? Need an extravagant settee back or a firework display? Make sure the venue you are choosing can help you make your dreams come true.<br><br><br>
+
+<b><u>Step 5 - Narrow down your options</b></u><br>
+
+After you’ve gathered all the information about the venue, their services, availability and charges…etc. compare your options and make your decision.<br><br>
+
+
+It’s always wise to book your venue sooner, so you don’t have to risk losing the wedding venue of your dream to another couple who has their wedding on the same day as yours. <br><br><br>
+  </p>
+  </div>
+<br>
+<br>
+
+<h1 class="hb"><b><u>Review</u></b></h1>
+
+<div>
+<h2 id="fh2">WE APPRECIATE YOUR REVIEW!</h2>
+<h6 id="fh6">Your review will help us to improve our web hosting quality products, and customer services.</h6>
+
+
+<form id="feedback" action="">
+
+  <div class="pinfo">Your personal info</div>
+  
+  Name:
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+  <input  name="name" placeholder="John Doe" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+G-Mail:
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+    <input name="email" type="email" class="form-control" placeholder="john.doe@yahoo.com">
+     </div>
+  </div>
+</div>
+
+ <div class="pinfo">Rate our overall services.</div>
+  
+
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-heart"></i></span>
+   <select class="form-control" id="rate">
+      <option value="1star">1</option>
+      <option value="2stars">2</option>
+      <option value="3stars">3</option>
+      <option value="4stars">4</option>
+      <option value="5stars">5</option>
+    </select>
+    </div>
+  </div>
+</div>
+
+ <div class="pinfo">Write your feedback.</div>
+  
+
+<div class="form-group">
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+  <textarea class="form-control" id="review" rows="3"></textarea>
+ 
+    </div>
+  </div>
+</div>
+
+ <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+</div>
+
+
+<footer>
+
+<div class="row primary">
+  <div class="column about">
+    <p class="loc">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      316, Ruwan Perera Road, Sri Lanka<br>
+	  <h3>WHY US</h3>
+	  
+	  The Ultimate Setting For Some Of Life's Greatest Moments,<br>
+
+	  We Create Incredible Memories For Guests On Their 'Once In a Lifetime' Journey.<br>
+	  <br>
+	  <h3>FIND US</h3>
+    </p>
+    <div class="social">
+      <a href="https://www.facebook.com/" class="fa fa-facebook-square"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter-square"></a>
+      <a href="https://lk.linkedin.com/" class="fa fa-linkedin-square"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    </div>
+  </div>
+
+  <div class="column link">
+  <br><br>
+    GENERAL INQUIRIES<br>
+	TEL : +94 75 123 1299<br>
+	Email : we@sunsetplains.lk<br><br>
+
+	RESTAURANT RESERVATIONS<br>
+	TEL : +94 77 210 1187<br>
+	Email:sunsetreserve@sunsetplains.lk<br><br>
+
+	BANQUET SALES<br>
+	TEL : +94 70 345 2876<br>
+	Email: newrathada@sunsetplains.lk<br><br>
+	
+	PHOTOGRAPHIC<br>
+	TEL : +94 72 666 8765<br>
+	Email: marlin@sunsetplains.lk<br><br>
+    
+  </div>
+  <div class="column subscribe">
+	<div>
+	<p>
+	  <img class="qr" src="./images/qr.png">
+      <u>OPERATING HOURS</u><br><br>
+
+	MON - SAT -<br>
+     &nbsp &nbsp 8AM TO 10PM<br>
+	SUN -<br>
+     &nbsp &nbsp 8AM TO 12PM
+	 </p>
+    </div>
+	<div>
+		<p class="news">Sign up for the Hotel sunset plains newsletter<p>
+      <input type="email" placeholder="Your email id here" />
+      <button>Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<div class="row copyright">
+  <div class="footer-menu">
+
+    <a href="./HomePage.html">HOME</a>
+    <a href="./MyWedding.html">MY WEDDING</a>
+    <a href="./FoodAndBeverage.html">FOOD COMBO</a>
+    <a href="./promotion.html">PROMOTION & EVENTS</a>
+    <a href="./Reservation.html">RESERVATION</a>
+    <a href="./termandcondition.html">TERMS & CONDITIONS</a>
+    <a href="./AboutUs.html">ABOUT US</a>
+    <a href="./FAQ.html">FAQ</a>
+    <a href="./Blog.html">BLOG</a>
+
+  </div>
+   <p>Copyright &copy; 2024</p>
+</div>
+
+</footer>
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+
+</body>
+</html>
+</html>

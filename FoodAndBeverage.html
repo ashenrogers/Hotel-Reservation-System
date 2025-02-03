@@ -1,0 +1,504 @@
+<html>
+<head>
+<title>Hotel Sunset Plains</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    background-color: rgb(125, 125, 125);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+.div1{
+	color:white;
+	text-align: center;
+	font-family:verdana;
+    line-height: 2;
+    margin: 0;
+}
+.combo{
+	font-size: 45px;
+    background: -webkit-linear-gradient(#E4E3E1  , #0056b3 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h3 {
+    color: #FAF2F0;
+    text-align: center;
+}
+#bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+#bar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bar a:hover {
+    background-color: #000;
+}
+#bar input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 8px 0 8px auto;
+    font-size: 17px;
+    width: 200px;
+}
+#search {
+    border-radius: 8px;
+    width: 22px;
+    margin-left: 8px;
+    padding: 6px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.heading {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family:verdana;
+}
+.ph1{
+    height:550px;
+	width:1300px;
+}
+.cen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:70px;
+  -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FAD78C;
+}
+footer {
+  background-color: rgb(123, 120, 120);
+  color: white;
+  bottom: 0;
+  width: 100vw;
+  font-size: 16px;
+}
+footer * {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 2.5fr 2fr 2.5fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+.column subscribe {
+  display: grid;
+  align-items: stretch;
+}
+.qr{
+  width:30%;
+  float: right;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+.news{
+	font-size: 15px;
+}
+.loc{
+  font-size:20px;
+}
+h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+column link {
+
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+input,
+button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+button {
+  background-color: #2c6be9;
+  color: #ffffff;
+}
+div.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social a {
+  color: white;
+}
+.copyright {
+  padding: 0.3em 1em;
+  background-color: #25262e;
+}
+.footer-menu{
+  float: left;
+    margin-top: 10px;
+}
+.footer-menu a{
+  color: #cfd2d6;
+  padding: 6px;
+  text-decoration: none;
+}
+.footer-menu a:hover, .social i:hover{
+  color: #2c6be9;
+}
+.copyright p {
+  font-size: 0.9em;
+  text-align: right;
+}
+@media screen and (max-width: 850px) {
+  .row.primary {
+		grid-template-columns: 1fr;
+  }
+}
+.food{
+	text-align: left;
+	font-size: 35px;
+    font-family:sans-serif;
+    background: -webkit-linear-gradient(white, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.p1{
+	background-color:#0056b3;
+	color:#FDF1EF;
+	text-align:center;
+	font-size:20px;
+}
+
+
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .col {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.col {
+  float: left;
+  width: 32%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.me{
+	font-size:24px;
+	text-align:center;
+}
+
+</style>
+</head>
+<body>
+<header class="heading" id="home">
+<div id="bar">
+  <a href="./HomePage.html">HOME</a>
+  <a href="./MyWedding.html">MY WEDDING</a>
+  <a href="./FoodAndBeverage.html">FOOD COMBO</a>
+  <a href="./PromotionAndEvents.html">PROMOTION & EVENTS</a>
+  <a href="./Reservation.html">RESERVATION</a>
+  <a href="./AboutUs.html">ABOUT US</a>
+  <a href="./FAQ.html">FAQ</a>
+  <a href="./blog.html">BLOG</a>
+  <input type="text" placeholder="Search..">
+  <img id="search" src="./images/search.png">
+</div>
+</header>
+
+  <div class="div1">
+   <h1 class="combo"><b><u>Food & Beverage Combo</u></b></h1>
+<p>As a family in Sri Lanka dining experiences are always a pleasure to remember. From the worth of a rustic dining table to the comfort of our natural wonders, our founder, the late Robert hoorey, ensured these wonders specialities of local hospitality remain with us for the rest time.<br><br>
+Hotel sunset plains is home to 9 food and cocktail outlets serving a variety of cuisines and dishes, most restaurants include alfresco dining with stunning views of the grand lawn and lake.<br>
+Choose your food package!</p>
+</div>
+<br>
+<br>
+<div class="main">
+<h2 class="food">FOOD MENU</h2>
+  <div class="row">
+  <div class="col">
+    <div class="content">
+      <img src="./images/food9.jpg" alt="menu1" style="width:100%">
+      <h4 class="me">Menu 1</h4>
+      <ul>
+	  <li>Crème mango punch</li>
+	  <li>Vegetable biriyani with fried boiled egg</li>
+	  <li>Chicken khorma</li>
+	  <li>Green pea and cashew curry</li>
+	  <li>Ash plantain and brinjal moju</li>
+	  <li>Malay pickle</li>
+	  <li>Mint sambol & raita</li>
+	  <li>Papadam</li>
+	  </ul>
+	  <p class="p1">Rs.2000 per person</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content">
+      <img src="./images/food3.jpeg" alt="menu2" style="width:100%">
+      <h4 class="me">Menu 2</h4>
+      <ul>
+	  <li>Creamy mango punch or royal faluda</li>
+	  <li>Vegetable biriyani with fried boiled egg</li>
+	  <li>Fried chicken malay style or Masala fried fish</li>
+	  <li>Butter chicken or Mutton Rogan Josh</li>
+	  <li>Green peas & cashew curry</li>
+	  <li>Malay pickle, mint sambol and raita</li>
+	  <li>Papadam</li>
+	  </ul>
+	  <p class="p1">Rs.2500 per person</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content">
+      <img src="./images/food7.jpeg" alt="menu3" style="width:100%;">
+      <h4 class="me">Menu 3</h4>
+      <ul>
+	  <li>Crème orange punch</li>
+	  <li>chicken fried rice</li>
+	  <li>Chicken fry</li>
+	  <li>Chashew with fish curry</li>
+	  <li>Prawns spicy fry</li>
+	  <li>Bombay Dessert</li>
+	  <li>Spicy Mint Sauce</li>
+	  <li>egg fry</li>
+	  </ul>
+	  <p class="p1">Rs.3500 per person</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content">
+      <img src="./images/food1.jpeg" alt="menu4" style="width:100%">
+      <h4 class="me">Menu 4</h4>
+      <ul>
+	  <li>Mojito</li>
+	  <li>Beef fried rice</li>
+	  <li>Cheese mutton fry</li>
+	  <li>Raajma Masala & Soy Champ Masala</li>
+	  <li>Chicken Saag Wala</li>
+	  <li>Raita , Pickle & Mango    Chutney</li>
+	  <li>Chicken Saag Wala</li>
+	  <li>Pani Puri</li>
+	  </ul>
+	  <p class="p1">Rs.4000 per person</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content">
+      <img src="./images/food2.jpeg" alt="menu5" style="width:100%">
+      <h4 class="me">Menu 5</h4>
+      <ul>
+	  <li>Almong milk shake</li>
+	  <li>Mutton Biryani Beef & boiled egg</li>
+	  <li> Chicken khorma</li>
+	  <li>Fish Malabar & Garlic Prawns</li>
+	  <li>Raajma Masala & Daal Tadkau</li>
+	  <li>Fish Pakora</li>
+	  <li> Srilankan Salad</li>
+	  <li>Fresh Srilankan mix sweets</li>
+	  </ul>
+	  <p class="p1">Rs.4500 per person</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content">
+      <img src="./images/food8.jpeg" alt="menu6" style="width:100%; height:101%;">
+      <h4 class="me">Menu 6</h4>
+      <ul>
+	  <li>Cashew daksh shake</li>
+	  <li>Nasi-goreng seafood</li>
+	  <li> Chilly chicken with cashews</li>
+	  <li>Fries with Butter Saucey</li>
+	  <li>Chicken Biryani</li>
+	  <li>Lamb Rogan Josh</li>
+	  <li> Cheese and Spinach        Naan</li>
+	  <li>Gulab jamun & Gajar halwa</li>
+	  </ul>
+	  <p class="p1">Rs.5000 per person</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<br><br>
+
+<div class="main">
+<h2 class="food">COCKTAIL MENU</h2>
+  <div class="row">
+  <div class="col">
+    <div class="content">
+      <img src="./images/cock1.jpeg" alt="menu1" style="width:100%">
+      <h4 class="me">Menu 1</h4>
+      <ul>
+	  <li>Welcome drink</li>
+	  <li>Cold canapés - choice of any three</li>
+	  <li> Hot canapés - choice      of any three</li>
+	  <li>Desserts - choice of any three</li>
+	  <li>Action station - choice of any one</li>
+	  </ul>
+	  <p class="p1">Rs.3500 per person</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content">
+      <img src="./images/cock3.jpeg" alt="menu2" style="width:100%">
+      <h4 class="me">Menu 2</h4>
+      <ul>
+	  <li>Welcome drink</li>
+	  <li>Cold canapés - choice of any four</li>
+	  <li>Hot canapés - choice of any four</li>
+	  <li>Desserts - choice of any three</li>
+	  <li>Action station - choice of any two</li>
+	  </ul>
+	  <p class="p1">Rs.4250 per person</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="content">
+      <img src="./images/cock2.jpeg" alt="menu3" style="width:100%;">
+      <h4 class="me">Menu 3</h4>
+      <ul>
+	  <li>Welcome drink</li>
+	  <li>Cold canapés - choice of any five</li>
+	  <li>Hot canapés - choice of any six</li>
+	  <li>Desserts - choice of any four</li>
+	  <li>Action station - choice of any two</li>
+	  </ul>
+	  <p class="p1">Rs.4250 per person</p>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<footer>
+
+<div class="row primary">
+  <div class="column about">
+    <p class="loc">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      316, Ruwan Perera Road, Sri Lanka<br>
+	  <h3>WHY US</h3>
+	  
+	  The Ultimate Setting For Some Of Life's Greatest Moments,<br>
+
+	  We Create Incredible Memories For Guests On Their 'Once In a Lifetime' Journey.<br>
+	  <br>
+	  <h3>FIND US</h3>
+    </p>
+    <div class="social">
+      <a href="https://www.facebook.com/" class="fa fa-facebook-square"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter-square"></a>
+      <a href="https://lk.linkedin.com/" class="fa fa-linkedin-square"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    </div>
+  </div>
+
+  <div class="column link">
+  <br><br>
+    GENERAL INQUIRIES<br>
+	TEL : +94 75 123 1299<br>
+	Email : we@sunsetplains.lk<br><br>
+
+	RESTAURANT RESERVATIONS<br>
+	TEL : +94 77 210 1187<br>
+	Email:sunsetreserve@sunsetplains.lk<br><br>
+
+	BANQUET SALES<br>
+	TEL : +94 70 345 2876<br>
+	Email: newrathada@sunsetplains.lk<br><br>
+	
+	PHOTOGRAPHIC<br>
+	TEL : +94 72 666 8765<br>
+	Email: marlin@sunsetplains.lk<br><br>
+    
+  </div>
+  <div class="column subscribe">
+	<div>
+	<p>
+	  <img class="qr" src="./images/qr.png">
+      <u>OPERATING HOURS</u><br><br>
+
+	MON - SAT -<br>
+     &nbsp &nbsp 8AM TO 10PM<br>
+	SUN -<br>
+     &nbsp &nbsp 8AM TO 12PM
+	 </p>
+    </div>
+	<div>
+		<p class="news">Sign up for the Hotel sunset plains newsletter<p>
+      <input type="email" placeholder="Your email id here" />
+      <button>Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<div class="row copyright">
+  <div class="footer-menu">
+
+    <a href="./home.html">HOME</a>
+    <a href="./MyWedding.html">MY WEDDING</a>
+    <a href="./Food&Beverage_Menu.html">FOOD COMBO</a>
+    <a href="./promotion.html">PROMOTION & EVENTS</a>
+    <a href="./reservation.html">RESERVATION</a>
+    <a href="./termandcondition.html">TERMS & CONDITIONS</a>
+    <a href="./aboutus.html">ABOUT US</a>
+    <a href="./FAQ.html">FAQ</a>
+    <a href="./blog.html">BLOG</a>
+
+</footer>
+</body>
+</html>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Sunset Plains</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body {
+    background-color: #0B0C10;
+    color: #EAEAEA;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #FAD78C;
+}
+
+h3 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Navigation Bar */
+#bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+#bar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bar a:hover {
+    background-color: #000;
+}
+#bar input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 8px 0 8px auto;
+    font-size: 17px;
+    width: 200px;
+}
+#search {
+    border-radius: 8px;
+    width: 22px;
+    margin-left: 8px;
+    padding: 6px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.div1 {
+    background: linear-gradient(135deg, #bbbbbb, #ffffff);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Promotion Table */
+table {
+    width: 100%;
+    background-color: #6f6f6f;
+    color: white;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+table th {
+    background-color: #0056b3;
+    color: black;
+    padding: 15px;
+    font-size: 18px;
+}
+
+table td {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.text {
+    color: #EAEAEA;
+    font-size: 16px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #FAD78C;
+}
+
+/* Footer */
+footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.5em;
+        }
+
+        .social a {
+            color: white;
+        }
+
+        .social a:hover {
+            color: #0056b3;
+        }
+</style>
+</head>
+<body>
+<header class="heading">
+    <div id="bar">
+        <div class="menu">
+            <a href="./HomePage.html">HOME</a>
+            <a href="./MyWedding.html">MY WEDDING</a>
+            <a href="./FoodAndBeverage.html">FOOD COMBO</a>
+            <a href="./PromotionAndEvents.html">PROMOTION & EVENTS</a>
+            <a href="./Reservation.html">RESERVATION</a>
+            <a href="./AboutUs.html">ABOUT US</a>
+            <a href="./FAQ.html">FAQ</a>
+            <a href="./Blog.html">BLOG</a>
+        </div>
+        <input type="text" placeholder="Search..">
+    </div>
+</header>
+<div class="div1">
+    <table>
+        <tr>
+            <th>Promotion & Events</th>
+        </tr>
+        <tr>
+            <td>
+                <h4>Promotion</h4>
+                <ul>
+                    <li>Sunset Plains is known to have some of the most well-known event promotions.</li>
+                    <li>Enjoy a mouthwatering selection of sweet and savory items at The Barhouse high tea every day from 3 PM to 6 PM for just LKR 1500 nett per person.</li>
+                </ul>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./images/img1.jpg" alt="Promotion 1">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./images/weddingwelcomedrinks1.jpg" alt="Promotion 2">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./images/img1.jpg" alt="Promotion 3">
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<footer>
+    <div class="row">
+        <div class="column">
+            <h3>Contact Us</h3>
+            <p>316, Ruwan Perera Road, Sri Lanka</p>
+            <p>Email: we@sunsetplains.lk</p>
+            <p>Phone: +94 75 123 1299</p>
+        </div>
+        <div class="column">
+            <h3>Social Media</h3>
+            <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 Hotel Sunset Plains. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 3000);
+}
+</script>
+</body>
+</html>

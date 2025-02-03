@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Sunset Plains - Wedding Planner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h3 {
+            color: #333333;
+            text-align: center;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+        }
+
+        #bar {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        #bar a {
+            float: left;
+            text-align: center;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #bar a:hover {
+            background-color: #000;
+        }
+
+        #bar input[type=text] {
+            padding: 6px;
+            border: none;
+            margin: 8px 0 8px auto;
+            font-size: 17px;
+            width: 200px;
+        }
+
+        #search {
+            border-radius: 8px;
+            width: 22px;
+            margin-left: 8px;
+            padding: 6px;
+            background-color: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+            font-size: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input, form select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .reserve-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .reserve-button:hover {
+            background-color: #0056b3;
+        }
+
+        .reserve-button:active {
+            background-color: #004085;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.5em;
+        }
+
+        .social a {
+            color: white;
+        }
+
+        .social a:hover {
+            color: #0056b3;
+        }
+    </style>
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", (event) => {
+            const name = document.getElementById("name").value.trim();
+            const contact = document.getElementById("contact").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const date = document.getElementById("date").value;
+
+            // Name validation
+            const nameRegex = /^[a-zA-Z\s]+$/;
+            if (!nameRegex.test(name)) {
+                alert("Name should contain only alphabets and spaces.");
+                event.preventDefault();
+                return;
+            }
+
+            // Contact number validation
+            const contactRegex = /^[0-9]{10}$/;
+            if (!contactRegex.test(contact)) {
+                alert("Contact number must be a 10-digit numeric value.");
+                event.preventDefault();
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+                return;
+            }
+
+            // Date validation
+            const selectedDate = new Date(date);
+            const currentDate = new Date();
+            currentDate.setHours(0, 0, 0, 0); // Set to start of the day
+
+            if (selectedDate < currentDate) {
+                alert("The wedding date cannot be in the past.");
+                event.preventDefault();
+                return;
+            }
+        });
+    });
+    
+        function calculateTotal() {
+            const weddingPlanPrices = {
+                "Platinum-Romantic": 4500000.00,
+                "Platinum-Ancient": 3700000.00,
+                "Platinum-Vintage": 4000000.00,
+                "Platinum-Industrial": 3500000.00,
+                "Gold-Retro": 2800000.00,
+                "Gold-Art Deco": 3000000.00,
+                "Gold-Natural": 2500000.00,
+                "Gold-Country": 2600000.00,
+                "Silver-Electric": 2000000.00,
+                "Silver-Nautical": 1600000.00,
+                "Silver-Glamourous": 1800000.00,
+                "Silver-Preppy": 1500000.00,
+                "Bronze-DIY": 1200000.00,
+                "Bronze-Alternative": 1100000.00,
+                "Bronze-Preppy": 1000000.00,
+                "Bronze-Rustic": 1400000.00
+            };
+
+            const foodComboPrices = {
+                "Menu 1": 2000.00,
+                "Menu 2": 2500.00,
+                "Menu 3": 3500.00,
+                "Menu 4": 4000.00,
+                "Menu 5": 4500.00,
+                "Menu 6": 5000.00
+            };
+
+            const cocktailMenuPrices = {
+                "Menu 1": 3500.00,
+                "Menu 2": 4250.00,
+                "Menu 3": 5000.00
+            };
+
+            const weddingPlan = document.getElementById("weddingPlan").value;
+            const foodCombo = document.getElementById("foodCombo").value;
+            const cocktailMenu = document.getElementById("cocktailMenu").value;
+            const guestCount = parseInt(document.getElementById("guestCount").value) || 0;
+
+            const weddingPlanPrice = weddingPlanPrices[weddingPlan] || 0;
+            const foodComboPrice = foodComboPrices[foodCombo] || 0;
+            const cocktailPrice = cocktailMenuPrices[cocktailMenu] || 0;
+
+            const total = weddingPlanPrice + (foodComboPrice + cocktailPrice) * guestCount;
+
+            document.getElementById("totalAmount").innerText = "Rs. " + total.toFixed(2);
+            document.getElementById("totalAmountInput").value = total.toFixed(2); // Update hidden input
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="bar">
+            <a href="HomePage.html">HOME</a>
+            <a href="MyWedding.html">MY WEDDING</a>
+            <a href="FoodAndBeverage.html">FOOD COMBO</a>
+            <a href="PromotionAndEvents.html">PROMOTION</a>
+            <a href="Reservation.html">RESERVATION</a>
+            <a href="AboutUs.html">ABOUT US</a>
+            <a href="FAQ.html">FAQ</a>
+            <input type="text" placeholder="Search..">
+            <img id="search" src="./images/search.png">
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Register Your Wedding</h1>
+        <form action="register_wedding.php" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="text" id="contact" name="contact" placeholder="Contact Number" required pattern="[0-9]{10}">
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <input type="date" id="date" name="date" required>
+
+
+            <label for="weddingPlan">Select Wedding Plan:</label>
+            <select id="weddingPlan" name="weddingPlan" onchange="calculateTotal()">
+                <option value="">Select a Plan</option>
+                <option>Platinum-Romantic</option>
+                <option>Platinum-Ancient</option>
+                <option>Platinum-Vintage</option>
+                <option>Platinum-Industrial</option>
+                <option>Gold-Retro</option>
+                <option>Gold-Art Deco</option>
+                <option>Gold-Natural</option>
+                <option>Gold-Country</option>
+                <option>Silver-Electric</option>
+                <option>Silver-Nautical</option>
+                <option>Silver-Glamourous</option>
+                <option>Silver-Preppy</option>
+                <option>Bronze-DIY</option>
+                <option>Bronze-Alternative</option>
+                <option>Bronze-Preppy</option>
+                <option>Bronze-Rustic</option>
+            </select>
+
+            <label for="foodCombo">Select Food Combo:</label>
+            <select id="foodCombo" name="foodCombo" onchange="calculateTotal()">
+                <option value="">Select a Menu</option>
+                <option>Menu 1</option>
+                <option>Menu 2</option>
+                <option>Menu 3</option>
+                <option>Menu 4</option>
+                <option>Menu 5</option>
+                <option>Menu 6</option>
+            </select>
+
+            <label for="cocktailMenu">Select Cocktail Menu:</label>
+            <select id="cocktailMenu" name="cocktailMenu" onchange="calculateTotal()">
+                <option value="">Select a Menu</option>
+                <option>Menu 1</option>
+                <option>Menu 2</option>
+                <option>Menu 3</option>
+            </select>
+
+            <label for="guestCount">Number of Guests:</label>
+            <input type="number" id="guestCount" name="guestCount" placeholder="Number of Guests" min="0" onchange="calculateTotal()">
+
+            <input type="hidden" id="totalAmountInput" name="totalAmount" value="0">
+            
+            <p class="total">Total Amount: <span id="totalAmount">Rs. 0.00</span></p>
+
+            <button type="submit" class="reserve-button">Reserve</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hotel Sunset Plains. All rights reserved. | <a href="#">Terms & Conditions</a></p>
+        <div class="social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

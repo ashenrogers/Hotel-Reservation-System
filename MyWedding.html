@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Hall Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h3 {
+            color: #333333;
+            text-align: center;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+        }
+
+        #bar {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        #bar a {
+            float: left;
+            text-align: center;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #bar a:hover {
+            background-color: #000;
+        }
+
+        #bar input[type=text] {
+            padding: 6px;
+            border: none;
+            margin: 8px 0 8px auto;
+            font-size: 17px;
+            width: 200px;
+        }
+
+        #search {
+            border-radius: 8px;
+            width: 22px;
+            margin-left: 8px;
+            padding: 6px;
+            background-color: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .package {
+            margin-bottom: 40px;
+        }
+
+        .package h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .hall-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hall {
+            flex: 1 1 calc(20% - 20px);
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            transition: box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hall:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .hall img {
+            width: 100%;
+            height: 70%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .hall-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .hall-price {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="heading" id="home">
+        <div id="bar">
+        <a href="./HomePage.html">HOME</a>
+        <a href="./MyWedding.html">MY WEDDING</a>
+        <a href="./FoodAndBeverage.html">FOOD COMBO</a>
+        <a href="./PromotionAndEvents.html">PROMOTION & EVENTS</a>
+        <a href="./Reservation.html">RESERVATION</a>
+        <a href="./AboutUs.html">ABOUT US</a>
+        <a href="./FAQ.html">FAQ</a>
+        <a href="./Blog.html">BLOG</a>
+        <input type="text" placeholder="Search..">
+        <img id="search" src="./images/search.png">
+        </div>
+        </header>
+
+    <div class="container">
+        <!-- Platinum Package -->
+        <div class="package">
+            <h2>Platinum Package</h2>
+            <div class="hall-list">
+                <div class="hall">
+                    <img src="images/ancient.jpg" alt="Ancient Hall">
+                    <div class="hall-name">Ancient</div>
+                    <div class="hall-price">3700000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Vintage.jpg" alt="Vintage Hall">
+                    <div class="hall-name">Vintage</div>
+                    <div class="hall-price">4000000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/industrial.jpg" alt="Industrial Hall">
+                    <div class="hall-name">Industrial</div>
+                    <div class="hall-price">3500000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Romantic.jpg" alt="Romantic Hall">
+                    <div class="hall-name">Romantic</div>
+                    <div class="hall-price">4500000.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gold Package -->
+        <div class="package">
+            <h2>Gold Package</h2>
+            <div class="hall-list">
+                <div class="hall">
+                    <img src="images/Retro.jpg" alt="Retro Hall">
+                    <div class="hall-name">Retro</div>
+                    <div class="hall-price">2800000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Natural.jpeg" alt="Natural Hall">
+                    <div class="hall-name">Natural</div>
+                    <div class="hall-price">2500000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Country.jpg" alt="Country Hall">
+                    <div class="hall-name">Country</div>
+                    <div class="hall-price">2600000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Art deco.jpg" alt="Art Deco Hall">
+                    <div class="hall-name">Art Deco</div>
+                    <div class="hall-price">3000000.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Silver Package -->
+        <div class="package">
+            <h2>Silver Package</h2>
+            <div class="hall-list">
+                <div class="hall">
+                    <img src="images/eclectic.jpg" alt="Eclectic Hall">
+                    <div class="hall-name">Eclectic</div>
+                    <div class="hall-price">2000000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Nautical.jpg" alt="Nautical Hall">
+                    <div class="hall-name">Nautical</div>
+                    <div class="hall-price">1600000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Glamourous.jpg" alt="Glamourous Hall">
+                    <div class="hall-name">Glamourous</div>
+                    <div class="hall-price">1800000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Preppy.jpg" alt="Preppy Hall">
+                    <div class="hall-name">Preppy</div>
+                    <div class="hall-price">1500000.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bronze Package -->
+        <div class="package">
+            <h2>Bronze Package</h2>
+            <div class="hall-list">
+                <div class="hall">
+                    <img src="images/DIY.jpeg" alt="DIY Hall">
+                    <div class="hall-name">DIY</div>
+                    <div class="hall-price">1200000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Alternative.jpg" alt="Alternative Hall">
+                    <div class="hall-name">Alternative</div>
+                    <div class="hall-price">1100000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Grand Ballroom.jpg" alt="Grand Ballroom Hall">
+                    <div class="hall-name">Grand Ballroom</div>
+                    <div class="hall-price">1000000.00</div>
+                </div>
+                <div class="hall">
+                    <img src="images/Rustic.jpg" alt="Rustic Hall">
+                    <div class="hall-name">Rustic</div>
+                    <div class="hall-price">1400000.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Wedding Hall Reservation System. All Rights Reserved.
+    </footer>
+</body>
+</html>

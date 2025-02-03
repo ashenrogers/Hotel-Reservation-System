@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Sunset Plains</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+body {
+   font-family: 'Arial', sans-serif;
+   margin: 0;
+   padding: 0;
+   background: linear-gradient(135deg, #f6f6f6, #ffffff);
+   color: white;
+    }
+
+h3 {
+    color: #FAF2F0;
+    text-align: center;
+}
+#bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+#bar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bar a:hover {
+    background-color: #000;
+}
+#bar input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 8px 0 8px auto;
+    font-size: 17px;
+    width: 200px;
+}
+#search {
+    border-radius: 8px;
+    width: 22px;
+    margin-left: 8px;
+    padding: 6px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    height: 10vh;
+    background: url('./images/hotel.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     text-align: center;
+        }
+
+        .hero .title {
+            color: rgb(0, 0, 0);
+            font-size: 3em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Login Section */
+        .login-section {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 4em 2em;
+            background: rgba(126, 126, 126, 0.9);
+            border-radius: 15px;
+            margin: 2em;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-section .form-container {
+            width: 45%;
+            padding: 2em;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-section h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .login-section input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-section input[type="submit"] {
+            background: #0056b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-section input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        .login-section a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .login-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #adadad;
+            align-self: center;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        footer .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        footer .column {
+            width: 30%;
+            margin: 1em 0;
+        }
+
+        footer .social a {
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        footer .social a:hover {
+            color: #c7940a;
+        }
+
+        footer .copyright {
+            margin-top: 1em;
+            font-size: 0.9em;
+        }
+
+        @media screen and (max-width: 768px) {
+            .login-section {
+                flex-direction: column;
+                padding: 2em;
+            }
+
+            .login-section .form-container {
+                width: 100%;
+                margin-bottom: 1em;
+            }
+
+            footer .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="bar">
+            <div>
+                <a href="./HomePage.html">Home</a>
+                <a href="./Login.html">Login</a>
+                <a href="./MyWedding.html">My Wedding</a>
+                <a href="./FoodAndBeverage.html">Food Combo</a>
+                <a href="./PromotionAndEvents.html">Promotion & Events</a>
+                <a href="./Reservation.html">Reservation</a>
+                <a href="./AboutUs.html">About Us</a>
+                <a href="./Blog.html">Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="title">Welcome to Hotel Sunset Plains</div>
+    </section>
+
+    <section class="login-section">
+        <div class="form-container">
+            <h2>Login to Your Account</h2>
+            <form>
+                <label>Username</label>
+                <input type="text" name="uname" placeholder="Enter Username">
+                <label>Password</label>
+                <input type="password" name="pword" placeholder="Enter Password">
+                <div>
+                Remember me <input type="checkbox" id="remember me">
+                <a href="./forgot password.html" style="float:right;">Forgot Password?</a>
+                </div>
+                <a href="HomePage.html" class="login-button">Login</a>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>New Here?</h2>
+            <p>Sign up and reserve your booking now!</p>
+            <a href="./Signup.html" class="btn">Sign Up</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="column">
+                <h3>Contact Us</h3>
+                <p>316, Ruwan Perera Road, Sri Lanka</p>
+                <p>+94 75 123 1299</p>
+                <p>we@sunsetplains.lk</p>
+            </div>
+
+            <div class="column">
+                <h3>Follow Us</h3>
+                <div class="social">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook-square"></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter-square"></a>
+                    <a href="https://lk.linkedin.com/" class="fa fa-linkedin-square"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3>Newsletter</h3>
+                <p>Sign up for our newsletter to stay updated.</p>
+                <input type="email" placeholder="Your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2024 Hotel Sunset Plains. All rights reserved.</div>
+    </footer>
+</body>
+</html>

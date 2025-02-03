@@ -1,0 +1,364 @@
+<html>
+<head>
+<title>Hotel Sunset Plains</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+h3 {
+    color: #FAF2F0;
+    text-align: center;
+}
+#bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+#bar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bar a:hover {
+    background-color: #000;
+}
+#bar input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 8px 0 8px auto;
+    font-size: 17px;
+    width: 200px;
+}
+#search {
+    border-radius: 8px;
+    width: 22px;
+    margin-left: 8px;
+    padding: 6px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.heading {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: verdana;
+}
+.ph {
+    max-height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.cen {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FAD78C;
+}
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer * {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+.row {
+    padding: 1em;
+    margin: 0 auto;
+}
+.row.primary {
+    display: grid;
+    grid-template-columns: 2.5fr 2fr 2.5fr;
+    align-items: stretch;
+    gap: 1em;
+}
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+}
+.column.subscribe {
+    display: grid;
+    grid-template-rows: 2fr 2.5fr;
+    align-items: stretch;
+}
+.qr {
+    width: 30%;
+    float: right;
+    border: 1px dotted black;
+    margin: 0 0 15px 20px;
+}
+.news {
+    font-size: 15px;
+}
+.loc {
+    font-size: 20px;
+}
+h3 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.4em;
+    white-space: nowrap;
+}
+.column.link {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+}
+input,
+button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+button {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+.social a {
+    color: white;
+}
+.copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+}
+.footer-menu {
+    float: left;
+    margin-top: 10px;
+}
+.footer-menu a {
+    color: #cfd2d6;
+    padding: 6px;
+    text-decoration: none;
+}
+.footer-menu a:hover,
+.social i:hover {
+    color: #c7940a;
+}
+.copyright p {
+    font-size: 0.9em;
+    text-align: right;
+}
+@media screen and (max-width: 850px) {
+    .row.primary {
+        grid-template-columns: 1fr;
+        gap: 0.5em;
+    }
+}
+video {
+    width: 100%;
+    height: auto;
+}
+.div3 {
+    width: 100%;
+    background-color: #4d5663;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    align-items: stretch;
+    gap: 1em;
+}
+.div4 {
+    display: flex;
+    text-align: left;
+    align-items: flex-end;
+    padding: 50px;
+    font-family: Serif;
+    font-size: 20px;
+}
+.div5 {
+    padding: 50px;
+    text-align: justify;
+    font-family: Times;
+    font-size: 22px;
+}
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+div.scroll-container img {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+}
+marquee {
+    font-family: Optima;
+    font-size: 20px;
+}
+
+</style>
+</head>
+<body>
+<header class="heading" id="home">
+<div id="bar">
+  <a href="./HomePage.html">HOME</a>
+  <a href="./Login.html">LOGIN</a>
+  <a href="./MyWedding.html">MY WEDDING</a>
+  <a href="./FoodAndBeverage.html">FOOD COMBO</a>
+  <a href="./PromotionAndEvents.html">PROMOTION & EVENTS</a>
+  <a href="./Reservation.html">RESERVATION</a>
+  <a href="./AboutUs.html">ABOUT US</a>
+  <a href="./FAQ.html">FAQ</a>
+  <a href="./blog.html">BLOG</a>
+  <input type="text" placeholder="Search..">
+  <img id="search" src="./images/search.png">
+</div>
+
+
+  <div class="div1">
+   <img class="ph" src="images\wp12549190.webp">
+   <div class="cen">Hotel Sunset<br>Plains</div>
+  </div>
+  <div>
+  <br>
+  <video controls autoplay>
+  <source src="./images/pexels-nino-souza-3410663-2562x1440-30fps.mp4" type="video/mp4">
+  <source src="./images/pexels-nino-souza-3410663-2562x1440-30fps.ogg" type="video/ogg">
+   </video>
+   </div>
+   
+   <div class="div3">
+   <div class="div4">
+   <br><h1>LIFE<br> AT THE SUNSET <br>PLAINS</h1>
+   </div>
+   <div class="div5">
+   The Hotel Sunset Plains, a landmark personifying true Sri Lankan heritage and warm hospitality all too well known to our guests. Standing majestically in Jayewardenepura, Kotte, a city steeped in Sri Lankan history. Surrounded by greenery unknown to the bustling city and the famous Diyawanna Oya, the Hotel Sunset Plains is a dreamers’ bliss. Take a stroll in our gardens and be amazed, make a date at our restaurants or dip into the azure blue waters of our pool. Whatever it is you wish to indulge, we will spoil and pamper you with our service that will leave you speechless. Let us organize your fairytale wedding, corporate events or any other intimate function. We vouch that your stay here at the Sunset Plains will make you want to come back for more of the many luxuries it has to offer!
+   </div>
+   </div>
+   <marquee>
+   <h2>
+   Our Venues
+   </h2>
+   </marquee>
+   <div class="scroll-container">
+   <img src="./images/ph1.jpeg" class="ph1">
+   <img src="./images/ph2.jpeg" class="ph2">
+   <img src="./images/ph3.jpeg" class="ph3">
+   <img src="./images/ph4.jpeg" class="ph4">
+   <img src="./images/ph5.jpeg" class="ph5">
+   <img src="./images/ph6.jpeg" class="ph6">
+</div>
+</header>
+<footer>
+
+<div class="row primary">
+  <div class="column about">
+    <p class="loc">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      316, Ruwan Perera Road, Sri Lanka<br>
+	  <h3>WHY US</h3>
+	  
+	  The Ultimate Setting For Some Of Life's Greatest Moments,<br>
+
+	  We Create Incredible Memories For Guests On Their 'Once In a Lifetime' Journey.<br>
+	  <br>
+	  <h3>FIND US</h3>
+    </p>
+    <div class="social">
+      <a href="https://www.facebook.com/" class="fa fa-facebook-square"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter-square"></a>
+      <a href="https://lk.linkedin.com/" class="fa fa-linkedin-square"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    </div>
+  </div>
+
+  <div class="column link">
+  <br><br>
+    GENERAL INQUIRIES<br>
+	TEL : +94 75 123 1299<br>
+	Email : we@sunsetplains.lk<br><br>
+
+	RESTAURANT RESERVATIONS<br>
+	TEL : +94 77 210 1187<br>
+	Email:sunsetreserve@sunsetplains.lk<br><br>
+
+	BANQUET SALES<br>
+	TEL : +94 70 345 2876<br>
+	Email: newrathada@sunsetplains.lk<br><br>
+	
+	PHOTOGRAPHIC<br>
+	TEL : +94 72 666 8765<br>
+	Email: marlin@sunsetplains.lk<br><br>
+    
+  </div>
+  <div class="column subscribe">
+	<div>
+	<p>
+	  <img class="qr" src="./images/qr.png">
+      <u>OPERATING HOURS</u><br><br>
+
+	MON - SAT -<br>
+     &nbsp &nbsp 8AM TO 10PM<br>
+	SUN -<br>
+     &nbsp &nbsp 8AM TO 12PM
+	 </p>
+    </div>
+	<div>
+		<p class="news">Sign up for the Hotel sunset plains newsletter<p>
+      <input type="email" placeholder="Your email id here" />
+      <button>Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<div class="row copyright">
+  <div class="footer-menu">
+
+    <a href="./home.html">HOME</a>
+    <a href="./MyWedding.html">MY WEDDING</a>
+    <a href="./Food&Beverage_Menu.html">FOOD COMBO</a>
+    <a href="./promotion.html">PROMOTION & EVENTS</a>
+    <a href="./reservation.html">RESERVATION</a>
+    <a href="./termandcondition.html">TERMS & CONDITIONS</a>
+    <a href="./aboutus.html">ABOUT US</a>
+    <a href="./FAQ.html">FAQ</a>
+    <a href="./blog.html">BLOG</a>
+
+  </div>
+   <p>Copyright &copy; 2024</p>
+</div>
+
+</footer>
+</body>
+</html>
+</html>

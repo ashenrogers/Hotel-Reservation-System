@@ -1,0 +1,273 @@
+<html>
+<head>
+<title>Hotel Sunset Plains</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-color: #ffffff;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  color: #0056b3;
+  text-align: center;
+}
+
+#bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+#bar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bar a:hover {
+    background-color: #000;
+}
+#bar input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: 8px 0 8px auto;
+    font-size: 17px;
+    width: 200px;
+}
+#search {
+    border-radius: 8px;
+    width: 22px;
+    margin-left: 8px;
+    padding: 6px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: Verdana, sans-serif;
+}
+
+.div1 {
+  padding: 20px;
+  background-color: #aaa7a7;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+th {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  color: #0056b3;
+  text-align: center;
+  border-bottom: 2px solid #0056b3;
+  padding: 15px 0;
+}
+
+.faq {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.pha {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #000000;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #2b2b3d;
+  color: white;
+  font-size: 14px;
+  padding: 20px;
+}
+
+footer * {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+footer .row {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .column {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social a {
+  color: #0056b3;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  text-align: center;
+  padding: 10px;
+  background-color: #1e1e2f;
+}
+
+.footer-menu a {
+  color: #cfd2d6;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+  color: #0056b3;
+}
+
+@media screen and (max-width: 850px) {
+  footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+<header class="heading" id="home">
+<div id="bar">
+  <a href="./home.html">HOME</a>
+  <a href="./MyWedding.html">MY WEDDING</a>
+  <a href="./Food&Beverage_Menu.html">FOOD COMBO</a>
+  <a href="./PromotionAndEvents.html">PROMOTION & EVENTS</a>
+  <a href="./reservation.html">RESERVATION</a>
+  <a href="./aboutus.html">ABOUT US</a>
+  <a href="./FAQ.html">FAQ</a>
+  <a href="./blog.html">BLOG</a>
+  <input type="text" placeholder="Search..">
+  <img id="search" src="./images/search.png">
+</div>
+</header>
+
+<div class="div1">
+  <table width="100%" border="2"> 
+    <tr>
+      <th>FAQ</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>
+            <h3 class="faq">What kind of events can the banquet halls be rented for?</h3>
+            <p class="pha">Our Banquet Halls are ideal for a variety of events, including Anniversary Celebrations, Wedding Receptions, Corporate Meetings and workshops, Christening Celebrations, Reunions, Staff Christmas Parties, Art Exhibitions, Birthday Parties, Seminars, Auctions, Trade shows, and more.</p>
+          </li>
+          <li>
+            <h3 class="faq">Is parking free?</h3>
+            <p class="pha">Yes, we are the only location within the vicinity that can accommodate up to 1000 vehicles within the premises.</p>
+          </li>
+          <li>
+            <h3 class="faq">Can we bring our own food?</h3>
+            <p class="pha">Foods prepared from outside are not allowed due to food safety and liability issues.</p>
+          </li>
+          <li>
+            <h3 class="faq">May I bring in my own Decorator?</h3>
+            <p class="pha">Yes, you can personalize your decor for the wedding venue by hiring someone or decorating yourself.</p>
+          </li>
+          <li>
+            <h3 class="faq">Do you provide bar services?</h3>
+            <p class="pha">Yes, we do. You can speak to our banquet sales department with regards to your requirements and they will customize a package and service element for you.</p>
+          </li>
+          <li>
+            <h3 class="faq">How is the seating arranged?</h3>
+            <p class="pha">The banquet operations division will arrange or suggest an appropriate seating configuration based on the number of guests. A floor plan is provided, and the client decides on the location of the head table and guest tables. The WE staff will set up the tables and chairs accordingly.</p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<footer>
+<div class="row">
+  <div class="column about">
+    <p>
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      316, Ruwan Perera Road, Sri Lanka
+    </p>
+    <h3>WHY US</h3>
+    <p>The Ultimate Setting For Some Of Life's Greatest Moments. We Create Incredible Memories For Guests On Their 'Once In a Lifetime' Journey.</p>
+    <h3>FIND US</h3>
+    <div class="social">
+      <a href="https://www.facebook.com/" class="fa fa-facebook-square"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter-square"></a>
+      <a href="https://lk.linkedin.com/" class="fa fa-linkedin-square"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    </div>
+  </div>
+  <div class="column link">
+    <h3>GENERAL INQUIRIES</h3>
+    <p>TEL: +94 75 123 1299<br>Email: we@sunsetplains.lk</p>
+    <h3>RESTAURANT RESERVATIONS</h3>
+    <p>TEL: +94 77 210 1187<br>Email: sunsetreserve@sunsetplains.lk</p>
+    <h3>BANQUET SALES</h3>
+    <p>TEL: +94 70 345 2876<br>Email: newrathada@sunsetplains.lk</p>
+    <h3>PHOTOGRAPHIC</h3>
+    <p>TEL: +94 72 666 8765<br>Email: marlin@sunsetplains.lk</p>
+  </div>
+  <div class="column subscribe">
+    <p>
+      <u>OPERATING HOURS</u><br>
+      MON - SAT: 8AM TO 10PM<br>
+      SUN: 8AM TO 12PM
+    </p>
+    <p>Sign up for the Hotel Sunset Plains newsletter</p>
+    <input type="email" placeholder="Your email id here">
+    <button>Subscribe</button>
+  </div>
+</div>
+<div class="row copyright">
+  <div class="footer-menu">
+    <a href="./home.html">HOME</a>
+    <a href="./MyWedding.html">MY WEDDING</a>
+    <a href="./Food&Beverage_Menu.html">FOOD COMBO</a>
+    <a href="./promotion.html">PROMOTION & EVENTS</a>
+    <a href="./reservation.html">RESERVATION</a>
+    <a href="./termandcondition.html">TERMS & CONDITIONS</a>
+    <a href="./aboutus.html">ABOUT US</a>
+    <a href="./FAQ.html">FAQ</a>
+    <a href="./blog.html">BLOG</a>
+  </div>
+  <p>Copyright &copy; 2023</p>
+</div>
+</footer>
+</body>
+</html>
